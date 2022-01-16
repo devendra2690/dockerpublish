@@ -8,6 +8,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "Subscribe to Daily Code Buffer .... This is After we deploye it through CodePipe !!";
+        return "Subscribe to Daily Code Buffer .... This is After we deploye it through CodePipe helllloooosss !!";
     }
 }
