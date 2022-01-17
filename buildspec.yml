@@ -16,7 +16,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker images
-      - docker tag deven2690/dockerpublish $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag deven2690/dockerpublish:0.0.3 $REPOSITORY_URI:$IMAGE_TAG
       - docker build -t $REPOSITORY_URI:$IMAGE_TAG .
   post_build:
     commands:
