@@ -15,10 +15,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - echo Running maven build
       - docker images
-      - docker build -t $REPOSITORY_URI:latest .
-      - echo Tagging Docker image...
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      - ./mvnw -pl app package
+      - echo Building the Docker image...
+      - ./mvnw -pl app spring-boot:build-image -Dspring-boot.build-image.imageName=$REPOSITORY_URI:latest
   post_build:
     commands:
       - echo Build completed on `date`
