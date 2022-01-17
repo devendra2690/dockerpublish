@@ -16,8 +16,8 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - echo docker images
-      - docker tag 527629206502.dkr.ecr.ap-south-1.amazonaws.com/dockerpublish:latest 527629206502.dkr.ecr.ap-south-1.amazonaws.com/dockerpublish:0.0.3
-      - docker build -t 527629206502.dkr.ecr.ap-south-1.amazonaws.com/dockerpublish:latest .
+      - docker tag 527629206502.dkr.ecr.ap-south-1.amazonaws.com/dockerpublish 527629206502.dkr.ecr.ap-south-1.amazonaws.com/dockerpublish:0.0.3
+      - docker build -t 527629206502.dkr.ecr.ap-south-1.amazonaws.com/dockerpublish .
   post_build:
     commands:
       - echo Build completed on `date`
